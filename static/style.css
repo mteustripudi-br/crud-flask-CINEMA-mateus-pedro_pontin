@@ -1,0 +1,95 @@
+body {
+    font-family: Tahoma, sans-serif;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 0 16px;
+    color: #222;
+    background-color: #eeeeee;
+}
+
+h1 {
+    color: #5fb6d2;
+    text-align: center;
+}
+
+h2 {
+    color: #222;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    color: #222;
+    text-decoration: none;
+    margin: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin: 4px 0 12px;
+    box-sizing: border-box;
+}
+
+fieldset {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+legend {
+    color: #5fb6d2;
+}
+
+button,
+.botao {
+    background: #5fb6d2;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.botao.editar {
+    background: #1197ea;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: white;
+}
+
+th,
+td {
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #5fb6d2;
+    color: white;
+}
+
+.acoes {
+    white-space: nowrap;
+}
+
+.acoes form {
+    display: inline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+}
