@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Sala</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <h1>Editar Sala #{{ sala[0] }}</h1>
+
+    <form action="/salas/atualizar/{{ sala[0] }}" method="POST">
+
+        <label>Nome</label>
+        <input type="text" name="nome" maxlength="100"
+               value="{{ sala[1] }}" required>
+
+        <label>Tipo</label>
+        <input type="text" name="tipo" maxlength="100"
+               value="{{ sala[2] }}" required>
+
+        <label>Capacidade</label>
+        <input type="number" name="capacidade"
+               value="{{ sala[3] }}" required>
+
+        <label>Preço do Ingresso (R$)</label>
+        <input type="number" name="preco_ingresso" value="{{ sala[4] }}" required>
+
+        <button type="submit">Salvar Alterações</button>
+
+        <a href="/salas">Cancelar</a>
+
+    </form>
+
+</body>
+</html>

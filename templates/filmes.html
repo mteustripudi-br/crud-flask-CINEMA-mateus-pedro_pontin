@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Filmes</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Gerenciamento de Filmes</h1>
+
+<form action="/filmes/enviar" method="POST">
+
+    <label>Título</label>
+    <input type="text" name="titulo" maxlength="100" required>
+
+    <label>Gênero</label>
+    <input type="text" name="genero" maxlength="100" required>
+
+    <label>Duração (minutos)</label>
+    <input type="number" name="duracao_min" required>
+
+    <label>Data de lançamento</label>
+    <input type="date" name="data_lancamento" required>
+
+    <button type="submit">Adicionar Filme</button>
+
+</form>
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Título</th>
+        <th>Gênero</th>
+        <th>Duração</th>
+        <th>Data de lançamento</th>
+        <th>Ações</th>
+    </tr>
+
+    {% for filme in filmes %}
+    <tr>
+        <td>{{ filme[0] }}</td>
+        <td>{{ filme[1] }}</td>
+        <td>{{ filme[2] }}</td>
+        <td>{{ filme[3] }} min</td>
+        <td>{{ filme[4] }}</td>
+
+        <td class="acoes">
+
+            <a class="botao editar"
+               href="/filmes/editar/{{ filme[0] }}">
+                Editar
+            </a>
+
+            <form action="/filmes/excluir/{{ filme[0] }}" method="POST">
+                <button type="submit">Excluir</button>
+            </form>
+
+        </td>
+    </tr>
+
+    {% else %}
+    <tr>
+        <td colspan="6">Nenhum filme cadastrado.</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+<br>
+
+<a href="/">Voltar ao início</a>
+
+</body>
+</html>
